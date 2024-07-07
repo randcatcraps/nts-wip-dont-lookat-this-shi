@@ -10,4 +10,7 @@ all: signed.apk
 
 include build_common.mk
 
-.PHONY: all
+clean:
+	rm -f *.apk $(CLASSES) *.dex *.idsig
+
+.PHONY: all clean
