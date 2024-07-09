@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "java": {
+      "command": ["java-language-server"],
+      "url": "https://github.com/georgewfraser/java-language-server",
+      "highlightingModeRegex": "^Java$",
+      "root": ".",
+      "settings": {
+        "java": {
+          "classPath": [
+            "/opt/android-sdk/platforms/android-34/android.jar"
+          ],
+          "docPath": [
+            "/opt/android-sdk/platforms/android-34/android-stubs-src.jar"
+          ]
+        }
+      }
+    }
+  }
+}

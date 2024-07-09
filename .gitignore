@@ -1,3 +1,5 @@
+.clangd
+
 *.apk
 *.class
 *.dex
