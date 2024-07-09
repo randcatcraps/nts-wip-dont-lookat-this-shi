@@ -6,13 +6,19 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+  static {
+    System.loadLibrary("app_jni");
+  }
+
+  private native int getNum();
+
   @Override
   public void onCreate(Bundle bundle)
   {
     super.onCreate(bundle);
 
     TextView hello = new TextView(this);
-    hello.setText("Hello, world!");
+    hello.setText(String.format("num from jni: %d", getNum()));
     hello.setGravity(Gravity.CENTER);
 
     setContentView(hello);

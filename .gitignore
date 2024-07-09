@@ -2,3 +2,6 @@
 *.class
 *.dex
 *.idsig
+*.d
+*.o
+*.so
