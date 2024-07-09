@@ -1,4 +1,5 @@
 .clangd
+build.sh
 
 *.apk
 *.class
