@@ -1,0 +1,10 @@
+#ifndef __NTS_CONFIG_H__
+#define __NTS_CONFIG_H__
+
+#ifdef ENABLE_NLS
+# define PACKAGENAME    "@PROJECT_NAME@"
+
+# define LOCALEDIR      "@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_LOCALEDIR@"
+#endif
+
+#endif  /* __NTS_CONFIG_H__ */

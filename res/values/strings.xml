@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="show_num">num from jni: %d</string>
+  <string name="nts">nts</string>
+  <string name="reconnect">Please, disconnect and reconnect the USB first!</string>
+  <string name="idle">Connect host program…</string>
+  <string name="detected">Found PC</string>
+  <string name="denied">Access denied</string>
+  <string name="prepare">Now adjust the device orientation to desired (if needed)\n\nWhen ready, hit \"Start\". Your device should enter a blank screen.</string>
+  <string name="start">Start</string>
+  <string name="ready">Touch to control PC</string>
+  <string name="disconnected">USB disconnected</string>
 </resources>

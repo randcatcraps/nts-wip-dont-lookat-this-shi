@@ -1,0 +1,46 @@
+msgid "Unknown"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid ""
+"No available USB device was found. (Maybe try to unlock your device's "
+"lockscreen first. If you're sure the device is connected, it's probably due "
+"to you do not have the sufficient permission.)\n"
+"\n"
+"Now press OK to quit."
+msgstr ""
+
+msgid "Warning: Problem detected!"
+msgstr ""
+
+msgid ""
+"NOTE: One or more connected USB devices are already in accessory mode.\n"
+"\n"
+"If they are unrelated devices, please remove them;\n"
+"If it is the target device, please disconnect and reconnect.\n"
+"\n"
+"When finished, please restart this program.\n"
+"Now press OK to quit."
+msgstr ""
+
+msgid "Warning!"
+msgstr ""
+
+msgid ""
+"Too many USB devices were found, some of them might not be displayed in the "
+"list."
+msgstr ""
+
+msgid "List of currently connected USB device(s):"
+msgstr ""
+
+msgid "Please select an Android device... (No hot-plug)"
+msgstr ""
+
+msgid "Error opening device!"
+msgstr ""

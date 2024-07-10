@@ -1,0 +1,16 @@
+# build
+/CMakeCache.txt
+CMake*/
+Makefile
+/.ninja_*
+/*.ninja
+cmake_*.cmake
+/compile_commands.json
+/config.h
+/install_manifest.txt
+
+# IDE
+/.cache/
+
+# output
+/nts_host_linux

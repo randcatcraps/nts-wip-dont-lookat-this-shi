@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="nts">NTS</string>
+  <string name="reconnect">まずはUSBを切断、再連続してください！</string>
+  <string name="idle">PCへの連続を待機中…</string>
+  <string name="detected">連続を検出しました</string>
+  <string name="denied">アクセスが拒否されました</string>
+  <string name="prepare">もし必要の場合は、デバイスの画面回転を調整してください。\n\nOKの場合は、「いこう」ボタンを押してください。画面は真っ黒になります。</string>
+  <string name="start">いこう</string>
+  <string name="ready">タッチしてPCをコントロールできます</string>
+  <string name="disconnected">USBが切断されました</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="nts">煤板子</string>
+  <string name="reconnect">请先断开并重新连接 USB！</string>
+  <string name="idle">等待 PC 端建立连接…</string>
+  <string name="detected">检测到 PC 端连接</string>
+  <string name="denied">未授权</string>
+  <string name="prepare">您现在可以适当调整设备的屏幕旋转方向；\n\n当完成时，请点按「开始」，设备将会进入纯黑色屏幕。</string>
+  <string name="start">开始</string>
+  <string name="ready">触摸以控制 PC</string>
+  <string name="disconnected">USB 已拔除</string>
+</resources>

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.app">
-  <application>
+          package="com.notabletsar.app">
+  <uses-feature android:name="android.hardware.usb.accessory" />
+  <application android:label="@string/nts">
+
+    <!-- disable recreation on rotation / theme change -->
+
     <activity android:name=".MainActivity"
+              android:configChanges="orientation|screenLayout|screenSize|uiMode"
               android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
+    <activity android:name=".ControllerActivity"
+              android:configChanges="orientation|screenLayout|screenSize|uiMode" />
   </application>
 </manifest>
