@@ -1,12 +1,12 @@
-.clangd
-build.sh
+/.clangd
+/build.sh
 
-*.zip
-*.apk
+/*.zip
+/*.apk
 R.java
 *.class
-*.dex
-*.idsig
+/*.dex
+/*.idsig
 *.d
 *.o
 *.so
