@@ -1,4 +1,4 @@
 CompileFlags:
   Add:
-    - -I/usr/lib/jvm/java-22-openjdk/include
-    - -I/usr/lib/jvm/java-22-openjdk/include/linux
+    - -I/usr/lib/jvm/java-17-openjdk/include
+    - -I/usr/lib/jvm/java-17-openjdk/include/linux
