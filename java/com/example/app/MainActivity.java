@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     super.onCreate(bundle);
 
     TextView hello = new TextView(this);
-    hello.setText(String.format("num from jni: %d", getNum()));
+    hello.setText(String.format(getString(R.string.show_num), getNum()));
     hello.setGravity(Gravity.CENTER);
     hello.setOnClickListener(new View.OnClickListener() {
       @Override

@@ -17,6 +17,7 @@ include build_common.mk
 
 clean:
 	$(call clean_classes)
-	rm -f *.apk *.dex *.idsig $(DEPS) $(OBJS) $(JNILIB)
+	rm -f *.zip *.apk *.dex *.idsig \
+		$(DEPS) $(OBJS) $(JNILIB)
 
 .PHONY: all clean

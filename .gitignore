@@ -1,7 +1,9 @@
 .clangd
 build.sh
 
+*.zip
 *.apk
+R.java
 *.class
 *.dex
 *.idsig

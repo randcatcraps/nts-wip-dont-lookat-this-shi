@@ -26,18 +26,24 @@ JNILIB := lib/$(ANDROID_ABI)/libapp_jni.so
 KEYS ?= testkey.pk8 testkey.x509.pem
 SIGNFLAGS ?= --key testkey.pk8 --cert testkey.x509.pem
 
-res.apk: AndroidManifest.xml $(ANDROIDJAR)
+res.zip: $(shell find res -type f)
+	$(AAPT) compile --dir res $(AAPTCFLAGS) -o $@
+
+res.apk: AndroidManifest.xml res.zip $(ANDROIDJAR)
 	$(AAPT) link -I $(ANDROIDJAR) \
 		--manifest $< \
 		--debug-mode \
 		--target-sdk-version $(ANDROID_PLATFORM) \
-		$(AAPTFLAGS) -o $@
+		--java java \
+		$(AAPTLDFLAGS) res.zip -o $@
 
-classes.dex: $(ANDROIDJAR) $(JAVASRCS)
+# NOTE: R.java is updated while building res.apk
+classes.dex: $(ANDROIDJAR) $(JAVASRCS) | res.apk
 	$(call clean_classes)  # XXX: no easy way of knowing class deps
-	$(JAVAC) -classpath $(ANDROIDJAR) \
-		 --release $(BYTECODE_VER) \
-		 -h jni $(JAVAFLAGS) $(JAVASRCS)
+	find java -type f -name \*.java \
+		  -exec $(JAVAC) -classpath $(ANDROIDJAR) \
+				 --release $(BYTECODE_VER) \
+				 -h jni $(JAVAFLAGS) {} +
 	find java -type f -name \*.class \
 		  -exec $(DX) --classpath $(ANDROIDJAR) \
 				$(DXFLAGS) {} +
