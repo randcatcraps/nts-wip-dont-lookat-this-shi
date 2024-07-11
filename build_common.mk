@@ -1,3 +1,7 @@
+define clean_classes
+find java -type f -name \*.class -delete
+endef
+
 $(foreach var,ANDROID_ABI ANDROID_HOME ANDROID_HOST_TAG \
     ANDROID_NDK ANDROID_PLATFORM BYTECODE_VER CLANG_TRIPLET,\
     $(if $($(var)),,$(error variable $(var) is not set)))
@@ -13,7 +17,6 @@ APKSIGNER ?= apksigner
 ANDROIDJAR := $(ANDROID_HOME)/platforms/android-$(ANDROID_PLATFORM)/android.jar
 
 JAVASRCS := $(shell find java -type f -name \*.java)
-CLASSES := $(patsubst %.java,%.class,$(JAVASRCS))
 
 SRCS := $(shell find jni -type f -name \*.c)
 DEPS := $(patsubst %.c,%.d,$(SRCS))
@@ -31,11 +34,13 @@ res.apk: AndroidManifest.xml $(ANDROIDJAR)
 		$(AAPTFLAGS) -o $@
 
 classes.dex: $(ANDROIDJAR) $(JAVASRCS)
-	rm -f $(CLASSES)  # XXX: no easy way of knowing class deps
+	$(call clean_classes)  # XXX: no easy way of knowing class deps
 	$(JAVAC) -classpath $(ANDROIDJAR) \
 		 --release $(BYTECODE_VER) \
 		 -h jni $(JAVAFLAGS) $(JAVASRCS)
-	$(DX) --classpath $(ANDROIDJAR) $(DXFLAGS) $(CLASSES)
+	find java -type f -name \*.class \
+		  -exec $(DX) --classpath $(ANDROIDJAR) \
+				$(DXFLAGS) {} +
 
 -include $(DEPS)
 

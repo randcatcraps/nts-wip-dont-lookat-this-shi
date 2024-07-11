@@ -16,7 +16,7 @@ all: signed.apk
 include build_common.mk
 
 clean:
-	rm -f *.apk $(CLASSES) *.dex *.idsig \
-		$(DEPS) $(OBJS) $(JNILIB)
+	$(call clean_classes)
+	rm -f *.apk *.dex *.idsig $(DEPS) $(OBJS) $(JNILIB)
 
 .PHONY: all clean
